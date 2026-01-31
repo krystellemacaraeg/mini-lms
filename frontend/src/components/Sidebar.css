@@ -1,0 +1,53 @@
+/* 
+SIDEBAR LAYOUT
+*/
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--bg-card);
+    border-right: 1px solid var(--border-color);
+    padding: var(--spacing-lg);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.sidebar-nav {
+    list-style: none;
+}
+
+.sidebar-li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background-color: var(--bg-main);
+    color: var(--primary);
+}
+
+.main-content {
+    margin-left: 250px;
+    flex: 1;
+    padding: var(--spacing-xl);
+}
