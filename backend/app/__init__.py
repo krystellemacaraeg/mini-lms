@@ -41,10 +41,12 @@ def create_app():
     })
 
     # Register blueprints
-    from app.routes import health, database, auth
+    from app.routes import health, database, auth, courses, lessons
     app.register_blueprint(health.bp)
     app.register_blueprint(database.bp)
     app.register_blueprint(auth.bp)
+    app.register_blueprint(courses.bp)
+    app.register_blueprint(lessons.bp)
 
     # create database tables
     with app.app_context():
