@@ -40,10 +40,11 @@ def create_app():
         }
     })
 
-    # register blueprints (API routes)
-    from app.routes import health, database
+    # Register blueprints
+    from app.routes import health, database, auth
     app.register_blueprint(health.bp)
     app.register_blueprint(database.bp)
+    app.register_blueprint(auth.bp)
 
     # create database tables
     with app.app_context():
